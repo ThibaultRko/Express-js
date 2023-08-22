@@ -1,9 +1,9 @@
 const express = require('express');
-const userRouter = require('./Routers/user.routers')
+const userRouter = require('./Routers/user.router');
 
-//va creer une instance de l application
-//ça reprsésente notre serveur
-const app = express()
+// Va créer une instance d'application
+// ça représente notre server
+const app = express();
 
 app.get('/hello', (request, response) => {
     response.send('Hello World !');
@@ -11,7 +11,7 @@ app.get('/hello', (request, response) => {
 
 app.use(userRouter);
 
-//démarrer notre serveur
+//Démarrer notre serveur
 app.listen(8001, () => {
-    console.log('prêt à l\'écoute');
+    console.log('Prêt et à l\'écoute');
 })
